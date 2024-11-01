@@ -13,7 +13,7 @@ function App() {
   const [secretWord, setSecretWord] = useState('');
 
   useEffect(()=>{
-    let word =  window.localStorage.getItem('scretWord');
+    let word =  window.localStorage.getItem('secretWord');
     if(word && word.length > 0){
       setSecretWord(word);
       setAnswerLength(word.length);
