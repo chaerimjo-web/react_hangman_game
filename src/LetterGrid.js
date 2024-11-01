@@ -13,7 +13,7 @@ const LetterGrid = ({secretWord, guessedLetters, answerLength, complete})=>{
       alert('정답입니다~~~');
       complete();
     }
-  },[answer]);
+  },[answer, answerLength, complete]);
 
 
   //guessedLetters의 값이 변경되면 answer를 업데이트
@@ -26,7 +26,7 @@ const LetterGrid = ({secretWord, guessedLetters, answerLength, complete})=>{
 
     setAnswer(newCount);
     console.log('실행', newCount);
-  },[guessedLetters])
+  },[guessedLetters, secretWord])
 
   let letters = [...secretWord].map((letter, idx)=>{
     //let isShown = guessedLetters.indexOf(letter.toLowerCase()) > -1;
